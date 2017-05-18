@@ -1,0 +1,72 @@
+@keyframes rotate-cube {
+    from{transform: rotateY(45deg)rotateX(-40deg)rotateZ(20deg);}
+    20%{transform: rotateY(117deg)rotateX(-40deg)rotateZ(20deg);}
+    40%{transform: rotateY(189deg)rotateX(-40deg)rotateZ(20deg);}
+    60%{transform: rotateY(261deg)rotateX(-40deg)rotateZ(20deg);}
+    80%{transform: rotateY(333deg)rotateX(-40deg)rotateZ(20deg);}
+    to{transform: rotateY(405deg)rotateX(-40deg)rotateZ(20deg);}
+}
+@-webkit-keyframes rotate-cube {
+    from{-webkit-transform: rotateY(45deg)rotateX(-40deg)rotateZ(20deg);}
+    20%{-webkit-transform: rotateY(117deg)rotateX(-40deg)rotateZ(20deg);}
+    40%{-webkit-transform: rotateY(189deg)rotateX(-40deg)rotateZ(20deg);}
+    60%{-webkit-transform: rotateY(261deg)rotateX(-40deg)rotateZ(20deg);}
+    80%{-webkit-transform: rotateY(333deg)rotateX(-40deg)rotateZ(20deg);}
+    to{-webkit-transform: rotateY(405deg)rotateX(-40deg)rotateZ(20deg);}
+}
+body{
+    perspective: 1000px;
+}
+.magic-cube{
+    margin: 100px auto;
+    transform-style: preserve-3d;
+    width: 300px;
+    transform: rotateX(-40deg) rotateY(45deg) rotateZ(20deg);
+    -webkit-transform: rotateX(-40deg) rotateY(45deg) rotateZ(20deg);
+    position: relative;
+    transform-origin:50% 50% -150px;
+    -webkit-animation: rotate-cube 8s linear infinite;
+}
+.magic-cube .square{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+.magic-cube .front{
+    background-color: #00f;
+    transform: translateZ(150px);
+    -webkit-transform: translateZ(150px);
+}
+.magic-cube .top{
+    background-color: #f90;
+    transform: rotateX(90deg) translateZ(150px);
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+}
+.magic-cube .left{
+    background-color: #ff0;
+    transform: rotateY(-90deg) translateZ(150px);
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+}
+.magic-cube .right{
+    background-color: #666;
+    transform: rotateY(90deg) translateZ(150px);
+    -webkit-transform: rotateY(90deg) translateZ(150px);
+}
+.magic-cube .back{
+    background-color: #f00;
+    transform: rotateY(180deg) translateZ(150px);
+    -webkit-transform: rotateY(180deg) translateZ(150px);
+}
+.magic-cube .bottom{
+    background-color: #fff;
+    transform: rotateX(-90deg) translateZ(150px);
+    -webkit-transform: rotateX(-90deg) translateZ(150px);
+}
+.magic-cube .litter-square{
+    float: left;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px #999 solid;
+}
+

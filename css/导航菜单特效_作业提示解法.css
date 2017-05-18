@@ -1,0 +1,82 @@
+*{margin:0;padding: 0;}
+.nav{
+    display: block;
+    margin: 5vh auto 0;
+    width: 100%;
+    height: 10vh;
+}
+.nav .nav_list{
+    list-style: none;
+}
+.nav .nav_list > li{
+    float: left;
+    width: 8%;
+    margin-left: 8%;
+    text-align: center;
+    padding: 8px;
+    font-size: 3vh;
+    cursor: pointer;
+    position: relative;
+}
+.nav .nav_list > li .inner{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+.nav .nav_list > li:before,
+.nav .nav_list > li:after,
+.nav .nav_list > li .inner:before,
+.nav .nav_list > li .inner:after{
+    position: absolute;
+    content: "";
+    background-color: #00aa00;
+    transition: transform .5s;
+}
+/*底部边框*/
+.nav .nav_list > li:before{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    transform-origin: right center;
+    transform: scale3d(0,1,1);
+}
+/*顶部边框*/
+.nav .nav_list > li:after{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transform-origin: left center;
+    transform: scale3d(0,1,1);
+}
+/*左边边框*/
+.nav .nav_list > li .inner:before{
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    transform-origin: center bottom;
+    transform: scale3d(1,0,1);
+}
+/*右边边框*/
+.nav .nav_list > li .inner:after{
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    transform-origin: center top;
+    transform: scale3d(1,0,1);
+}
+/*设置鼠标滑动过的效果*/
+.nav .nav_list > li:hover:after,
+.nav .nav_list > li:hover:before,
+.nav .nav_list > li:hover .inner:after,
+.nav .nav_list > li:hover .inner:before{
+    transform: scale3d(1,1,1);
+}
+.nav .nav_list > li:hover .inner{
+    color: #00aa00;
+}

@@ -1,0 +1,86 @@
+*{margin:0;padding: 0;}
+/*雪花动画*/
+@keyframes snow-animation {
+    from{transform: translateY(0);}
+    20%{transform: translateY(22px);}
+    40%{transform: translateY(44px);}
+    60%{transform: translateY(66px);}
+    80%{transform: translateY(88px);}
+    to{transform: translateY(110px);}
+}
+/*树动画*/
+@keyframes tree {
+    from{transform: scale(1,1);}
+    to{transform: scale(1.1,1);}
+}
+/*雪人动画*/
+@keyframes snowman {
+    from{transform: scale(1,1);}
+    to{transform: scale(1,.98);}
+}
+.header-bg{
+    margin: 235px auto;
+    width: 1000px;
+    height: 315px;
+    background: url("../pic/header-bg.png") repeat;
+    position: relative;
+}
+.snow{
+    position: absolute;
+    margin: 0 auto;
+    width: 918px;
+    height: 315px;
+    top: -111px;
+    left: 40px;
+    background: url("../pic/snow-bg.png") repeat;
+    animation: snow-animation 2s linear infinite;
+}
+.wrapper-bg{
+    margin: 0 auto;
+    width: 960px;
+    height: 111px;
+    background: url("../pic/wrapper-bg.png");
+    position: absolute;
+    bottom: 0;
+}
+.wrapper-bg .tree1,
+.wrapper-bg .tree2,
+.wrapper-bg .tree3,
+.wrapper-bg .tree4,
+.wrapper-bg .tree5,
+.wrapper-bg .tree6{
+    position: absolute;
+    animation: tree 1s ease-in-out infinite alternate;
+}
+.wrapper-bg .snowman{
+    position: absolute;
+    animation: snowman 2s ease-in-out infinite;
+}
+.wrapper-bg .tree1{
+    bottom: 1px;
+    left: 20px;
+}
+.wrapper-bg .tree2{
+    bottom: 30px;
+    left: 150px;
+}
+.wrapper-bg .tree3{
+    bottom: 60px;
+    left: 300px;
+}
+.wrapper-bg .snowman{
+    bottom: 20px;
+    left: 400px;
+}
+.wrapper-bg .tree4{
+    bottom: 10px;
+    left: 500px;
+}
+.wrapper-bg .tree5{
+    bottom: 50px;
+    left: 650px;
+}
+.wrapper-bg .tree6{
+    bottom: 70px;
+    left: 800px;
+}

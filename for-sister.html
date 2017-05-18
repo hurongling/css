@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset='UTF-8'>
+    <title>给佳玲的礼物</title>
+    <style type="text/css">
+        body{
+            font-family: Arial;
+        }
+        #content{
+            width: 1100px;
+            margin:0 auto;
+            padding:10% 0;
+            perspective:1200px;
+        }
+        #imgBox{
+            width: 1000px;
+            height: 300px;
+            margin:0 auto;
+            position: relative;
+            transform-style:preserve-3d;
+            transform-origin:50% 50% -500px;
+            transition:all 1s;
+        }
+        #imgBox > a{
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            left: 30%;
+            transform-origin:50% 50% -500px;
+        }
+        /*设置魔方转动*/
+        @keyframes rotate-cube {
+            from{transform: rotateY(45deg)rotateX(-40deg)rotateZ(20deg);}
+            20%{transform: rotateY(117deg)rotateX(-40deg)rotateZ(20deg);}
+            40%{transform: rotateY(189deg)rotateX(-40deg)rotateZ(20deg);}
+            60%{transform: rotateY(261deg)rotateX(-40deg)rotateZ(20deg);}
+            80%{transform: rotateY(333deg)rotateX(-40deg)rotateZ(20deg);}
+            to{transform: rotateY(405deg)rotateX(-40deg)rotateZ(20deg);}
+        }
+        @-webkit-keyframes rotate-cube {
+            from{-webkit-transform: rotateY(45deg)rotateX(-40deg)rotateZ(20deg);}
+            20%{-webkit-transform: rotateY(117deg)rotateX(-40deg)rotateZ(20deg);}
+            40%{-webkit-transform: rotateY(189deg)rotateX(-40deg)rotateZ(20deg);}
+            60%{-webkit-transform: rotateY(261deg)rotateX(-40deg)rotateZ(20deg);}
+            80%{-webkit-transform: rotateY(333deg)rotateX(-40deg)rotateZ(20deg);}
+            to{-webkit-transform: rotateY(405deg)rotateX(-40deg)rotateZ(20deg);}
+        }
+        .magic-cube{
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            width: 300px;
+            transform: rotateX(-40deg) rotateY(45deg) rotateZ(20deg);
+            -webkit-transform: rotateX(-40deg) rotateY(45deg) rotateZ(20deg);
+            position: relative;
+            transform-origin:50% 50% -20px;
+            -webkit-animation: rotate-cube 20s linear infinite;
+        }
+        .magic-cube .square{
+            position: absolute;
+            width: 210px;
+            height: 210px;
+        }
+        .magic-cube .front{
+            background-color: #00f;
+            transform: translateZ(105px);
+            -webkit-transform: translateZ(105px);
+        }
+        .magic-cube .top{
+            background-color: #f90;
+            transform: rotateX(90deg) translateZ(105px);
+            -webkit-transform: rotateX(90deg) translateZ(105px);
+        }
+        .magic-cube .left{
+            background-color: #ff0;
+            transform: rotateY(-90deg) translateZ(150px);
+            -webkit-transform: rotateY(-90deg) translateZ(105px);
+        }
+        .magic-cube .right{
+            background-color: #666;
+            transform: rotateY(90deg) translateZ(105px);
+            -webkit-transform: rotateY(90deg) translateZ(105px);
+        }
+        .magic-cube .back{
+            background-color: #f00;
+            transform: rotateY(180deg) translateZ(105px);
+            -webkit-transform: rotateY(180deg) translateZ(105px);
+        }
+        .magic-cube .bottom{
+            background-color: #fff;
+            transform: rotateX(-90deg) translateZ(105px);
+            -webkit-transform: rotateX(-90deg) translateZ(105px);
+        }
+
+        #imgBox > a:nth-child(1){transform: rotateY(0deg);}
+        #imgBox > a:nth-child(2){transform: rotateY(-45deg);}
+        #imgBox > a:nth-child(3){transform: rotateY(-90deg);}
+        #imgBox > a:nth-child(4){transform: rotateY(-135deg);}
+        #imgBox > a:nth-child(5){transform: rotateY(-180deg);}
+        #imgBox > a:nth-child(6){transform: rotateY(-225deg);}
+        #imgBox > a:nth-child(7){transform: rotateY(-270deg);}
+        #imgBox > a:nth-child(8){transform: rotateY(-315deg);}
+
+        .slide{
+            color: #ccc;
+            padding:20px;
+            text-decoration: none;
+            font-size: 50px;
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+        }
+        .slide:hover{
+            color: #333;
+        }
+        .slide-left{
+            left: 5%;
+        }
+        .slide-right{
+            right: 5%;
+        }
+        .magic-cube .square > img{
+            width: 210px;
+            height: 217px;
+        }
+        p,
+        .music{
+            display: inline;
+            float: left;
+        }
+        p{
+            font-size: 30px;
+            color: coral;
+            line-height: 30px;
+            margin-left: 100px;
+        }
+        .footer{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<iframe class="music" frameborder="no"  marginwidth="0" marginheight="0" width=300 height=80px src="//music.163.com/outchain/player?type=2&id=453062799&auto=1&height=66"></iframe>
+<p>(´,,•ω•,,)♡给我亲爱的，爱臭美的姐姐</p>
+<div id="content">
+    <section id="imgBox">
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s1.jpg"></div>
+                <div class="top square"><img src="pic/s2.jpg"></div>
+                <div class="left square"><img src="pic/s3.jpg"></div>
+                <div class="right square"><img src="pic/s4.jpg"></div>
+                <div class="back square"><img src="pic/s5.jpg"></div>
+                <div class="bottom square"><img src="pic/s6.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s7.jpg"></div>
+                <div class="top square"><img src="pic/s8.jpg"></div>
+                <div class="left square"><img src="pic/s9.jpg"></div>
+                <div class="right square"><img src="pic/s10.jpg"></div>
+                <div class="back square"><img src="pic/s11.jpg"></div>
+                <div class="bottom square"><img src="pic/s12.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s13.jpg"></div>
+                <div class="top square"><img src="pic/s14.jpg"></div>
+                <div class="left square"><img src="pic/s15.jpg"></div>
+                <div class="right square"><img src="pic/s16.jpg"></div>
+                <div class="back square"><img src="pic/s17.jpg"></div>
+                <div class="bottom square"><img src="pic/s18.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s19.jpg"></div>
+                <div class="top square"><img src="pic/s20.jpg"></div>
+                <div class="left square"><img src="pic/s21.jpg"></div>
+                <div class="right square"><img src="pic/s22.jpg"></div>
+                <div class="back square"><img src="pic/s23.jpg"></div>
+                <div class="bottom square"><img src="pic/s24.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s25.jpg"></div>
+                <div class="top square"><img src="pic/s26.jpg"></div>
+                <div class="left square"><img src="pic/s27.jpg"></div>
+                <div class="right square"><img src="pic/s28.jpg"></div>
+                <div class="back square"><img src="pic/s29.jpg"></div>
+                <div class="bottom square"><img src="pic/s30.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s31.jpg"></div>
+                <div class="top square"><img src="pic/s32.jpg"></div>
+                <div class="left square"><img src="pic/s33.jpg"></div>
+                <div class="right square"><img src="pic/s34.jpg"></div>
+                <div class="back square"><img src="pic/s35.jpg"></div>
+                <div class="bottom square"><img src="pic/s36.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s37.jpg"></div>
+                <div class="top square"><img src="pic/s38.jpg"></div>
+                <div class="left square"><img src="pic/s39.jpg"></div>
+                <div class="right square"><img src="pic/s40.jpg"></div>
+                <div class="back square"><img src="pic/s41.jpg"></div>
+                <div class="bottom square"><img src="pic/s42.jpg"></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="magic-cube">
+                <div class="front square"><img src="pic/s43.jpg"></div>
+                <div class="top square"><img src="pic/s44.jpg"></div>
+                <div class="left square"><img src="pic/s45.jpg"></div>
+                <div class="right square"><img src="pic/s46.jpg"></div>
+                <div class="back square"><img src="pic/s47.jpg"></div>
+                <div class="bottom square"><img src="pic/s48.jpg"></div>
+            </div>
+        </a>
+    </section>
+</div>
+<span class="slide slide-left" onclick="switchImg(1)">&lt;</span>
+<span class="slide slide-right" onclick="switchImg()">&gt;</span>
+<p class="footer">from:hurongling</p>
+<script type="text/javascript">
+    var imgBox = document.querySelector('#imgBox');
+    var angle = 0;
+    function switchImg(direction){
+        !direction
+                ? angle = angle + 45
+                : angle = angle - 45;
+        imgBox.setAttribute('style', 'transform: rotateY('+ angle +'deg);');
+    }
+</script>
+</body>
+</html>

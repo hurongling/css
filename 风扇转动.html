@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>风扇转动</title>
+    <style>
+    @keyframes fenanimation {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+    }
+    .fan {
+        width: 144px;
+        margin: 10% auto;
+    }
+    .fan img{
+        animation: fenanimation 1s linear infinite;
+    }
+    </style>
+</head>
+<body>
+<div class="fan">
+    <p>永动小风扇呼呼~~</p>
+    <img src="pic/风扇.png">
+</div>
+</body>
+</html>

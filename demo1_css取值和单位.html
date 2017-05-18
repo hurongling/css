@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        footer,header,section{display: block;}
+        body{
+            font-size: 2vw;
+            font-family: Arial;
+            padding:0 6vw;
+        }
+
+        .wrapper:after{clear:both;overflow: hidden;content: '';display: block;  }  /*清除浮动*/
+        .header,
+        .footer{
+            height: 5vh;
+            padding:1vw;
+            margin:0 -6vw;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .header{
+            margin-bottom: 10px;
+        }
+        .wrapper{
+            margin-bottom: 2vh;
+            margin-left: -0.333%;
+        }
+        .col-1,
+        .col-2,
+        .col-3{
+            padding:2vw;
+            float: left;
+            margin-left: 0.333%;
+            min-height: 20vh;
+            box-sizing:border-box;
+            background-color: rgba(255, 0, 0, .4);
+        }
+        .col-1{
+            width: 33%;
+        }
+        .col-2{
+            width: 66.333%;
+        }
+        .col-3{
+            width: 99.7%
+        }
+    </style>
+</head>
+<body>
+<header class="header">header</header>
+
+<section class="wrapper">
+    <div class="col-3">col-3</div>
+</section>
+
+<section class="wrapper">
+    <div class="col-1">col-1</div>
+    <div class="col-2">
+        <section class="wrapper">
+            <div class="col-3">col-3</div>
+        </section>
+        <section class="wrapper">
+            <div class="col-3">col-3</div>
+        </section>
+    </div>
+</section>
+
+<section class="wrapper">
+    <div class="col-2">
+        <section class="wrapper">
+            <div class="col-3">col-3</div>
+        </section>
+        <section class="wrapper">
+            <div class="col-3">col-3</div>
+        </section>
+        <section class="wrapper">
+            <div class="col-3">col-3</div>
+        </section>
+    </div>
+    <div class="col-1">col-1</div>
+</section>
+
+<footer class="footer">footer</footer>
+</body>
+</html>

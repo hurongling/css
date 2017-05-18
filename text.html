@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>长方型</title>
+</head>
+<body>
+    <canvas id="rectangle" width="100" height="100"></canvas>
+    <script type="text/javascript">
+        var cxt=document.getElementById('rectangle').getContext('2d');
+        cxt.beginPath();
+        cxt.arc(50,50,20,-0.5*Math.PI,Math.PI);
+        cxt.lineTo(50,50);
+        cxt.lineTo(50,30);
+        cxt.fillStyle="blue";
+        cxt.fill();
+        cxt.beginPath();
+        cxt.fillStyle="red";
+        cxt.fillRect(0,0,50,50);
+    </script>
+</body>
+</html>
